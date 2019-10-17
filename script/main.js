@@ -14,9 +14,11 @@ var askkm = prompt("Quanti KM vuoi percorrere?");
 // var askage = prompt("Quanti anni hai?");
 
 // calcola il prezzo in base ai km (imputuser x 0.21)
-// askkm x 0.21
+var prezzo = askkm * 0.21;
+
+console.log(prezzo);
 
 // seleziono elemento html in cui fare output
 var htmlElement = document.getElementById("price");
 // output finale su elemento selezionato
-htmlElement.innerHTML = "PREZZO: " + askkm * 0.21;
+htmlElement.innerHTML = "PREZZO: " + prezzo + " €";
