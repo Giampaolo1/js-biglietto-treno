@@ -11,14 +11,30 @@
 // quanti km vuoi percorrere? (0.21 eur x km)
 var askkm = prompt("Quanti KM vuoi percorrere?");
 // quanti anni hai ? (sconti under 20 and over 65)
-// var askage = prompt("Quanti anni hai?");
+var askage = prompt("Quanti anni hai?");
 
 // calcola il prezzo in base ai km (imputuser x 0.21)
 var prezzo = askkm * 0.21;
+
+// : capire come calcolare lo sconto
+// if minore di 20 apply 20% discount
+// if maggiore di 65 apply 40% discount
+// else don't apply discount
+
+if (askage < 20) {
+  prezzo - 20%
+}
+if (askage > 65) {
+  prezzo - 40%
+}
+else {
+  prezzo
+}
+
 
 console.log(prezzo);
 
 // seleziono elemento html in cui fare output
 var htmlElement = document.getElementById("price");
 // output finale su elemento selezionato
-htmlElement.innerHTML = "PREZZO: " + prezzo + " €";
+htmlElement.innerHTML = "PREZZO: " + prezzo + " € <br> Buon Viaggio!";
