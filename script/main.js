@@ -14,21 +14,27 @@ var askkm = prompt("Quanti KM vuoi percorrere?");
 var askage = prompt("Quanti anni hai?");
 
 // calcola il prezzo in base ai km (imputuser x 0.21)
-var prezzo = askkm * 0.21;
+var prezzopuro = askkm * 0.21;
 
 // : capire come calcolare lo sconto
 // if minore di 20 apply 20% discount
 // if maggiore di 65 apply 40% discount
 // else don't apply discount
 
+var scontounder = prezzopuro / 100 * 20;
+var scontoover = prezzopuro / 100 * 40;
+
+var prezzo18 = prezzopuro - scontounder;
+var prezzo65 = prezzopuro - scontoover;
+
 if (askage < 18) {
-  prezzo - 20%
+  prezzo18;
 }
-if (askage > 65) {
-  prezzo - 40%
+else if (askage > 65) {
+  prezzo65;
 }
 else {
-  prezzo
+  prezzopuro;
 }
 
 // sconto = numero / 100 * tasso
@@ -40,7 +46,7 @@ else {
 // }
 
 
-console.log(prezzo);
+console.log(prezzopuro,prezzo65,prezzo18);
 
 // seleziono elemento html in cui fare output
 var htmlElement = document.getElementById("price");
