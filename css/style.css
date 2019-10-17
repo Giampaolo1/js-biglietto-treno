@@ -1,0 +1,29 @@
+/*  regole generali della pagina */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* font */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* elenchi puntati:  */
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  padding: 2%;
+}
+nav a {
+  text-decoration: none;
+}
+/* fine elenchi puntati */
+
+
+/*  header  */
+/*  navbar */
