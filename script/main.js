@@ -27,14 +27,18 @@ var scontoover = prezzopuro / 100 * 40;
 var prezzo18 = prezzopuro - scontounder;
 var prezzo65 = prezzopuro - scontoover;
 
+// seleziono elemento html in cui fare output
+var htmlElement = document.getElementById("price");
+
+
 if (askage < 18) {
-  prezzo18;
+  htmlElement.innerHTML = "PREZZO: " + prezzo18 + " € <br> Buon Viaggio!";
 }
 else if (askage > 65) {
-  prezzo65;
+  htmlElement.innerHTML = "PREZZO: " + prezzo65 + " € <br> Buon Viaggio!";
 }
 else {
-  prezzopuro;
+  htmlElement.innerHTML = "PREZZO: " + prezzopuro + " € <br> Buon Viaggio!";
 }
 
 // sconto = numero / 100 * tasso
@@ -45,10 +49,9 @@ else {
 // fai altro
 // }
 
-
-console.log(prezzopuro,prezzo65,prezzo18);
-
-// seleziono elemento html in cui fare output
-var htmlElement = document.getElementById("price");
 // output finale su elemento selezionato
-htmlElement.innerHTML = "PREZZO: " + prezzo + " € <br> Buon Viaggio!";
+
+
+console.log(prezzo65);
+
+// prezzo65, prezzo18
