@@ -32,13 +32,13 @@ var htmlElement = document.getElementById("price");
 
 
 if (askage < 18) {
-  htmlElement.innerHTML = "PREZZO: " + prezzo18 + " € <br> Buon Viaggio!";
+  htmlElement.innerHTML = "PREZZO: " + prezzo18.toFixed(2) + " € <br> Buon Viaggio!";
 }
 else if (askage > 65) {
-  htmlElement.innerHTML = "PREZZO: " + prezzo65 + " € <br> Buon Viaggio!";
+  htmlElement.innerHTML = "PREZZO: " + prezzo65.toFixed(2) + " € <br> Buon Viaggio!";
 }
 else {
-  htmlElement.innerHTML = "PREZZO: " + prezzopuro + " € <br> Buon Viaggio!";
+  htmlElement.innerHTML = "PREZZO: " + prezzopuro.toFixed(2) + " € <br> Buon Viaggio!";
 }
 
 // sconto = numero / 100 * tasso
