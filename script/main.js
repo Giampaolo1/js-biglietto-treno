@@ -21,7 +21,7 @@ var prezzo = askkm * 0.21;
 // if maggiore di 65 apply 40% discount
 // else don't apply discount
 
-if (askage < 20) {
+if (askage < 18) {
   prezzo - 20%
 }
 if (askage > 65) {
@@ -30,6 +30,14 @@ if (askage > 65) {
 else {
   prezzo
 }
+
+// sconto = numero / 100 * tasso
+// poi sottrai questa tua variabile al prezzo come avevi pensato di fare
+// if (eta < 18) {
+// fai una cosa
+// } else if (altra condizione) {
+// fai altro
+// }
 
 
 console.log(prezzo);
