@@ -10,7 +10,7 @@
 // prompts
 
 // quanti km vuoi percorrere? (0.21 eur x km)
-var askkm = prompt("Quanti KM vuoi percorrere?");
+var askkm = prompt("Quanti KM vuoi percorrere??");
 // quanti anni hai ? (sconti under 20 and over 65)
 var askage = parseInt(prompt("Quanti anni hai?"));
 
