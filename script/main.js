@@ -57,12 +57,12 @@ htmlElement.innerHTML = "PREZZO: " + prezzo.toFixed(2) + " € <br> Buon Viaggio
 
 // stampo prezzo
 // stampo codice biglietto
-var htmlElement = document.getElementById("code");
-htmlElement.innerHTML = "Ticketnumber: " + ticketnumber;
+var htmlElement2 = document.getElementById("codbig");
+htmlElement2.innerHTML = "Ticketnumber: " + ticketnumber;
 
 // stampo data
-var htmlElement = document.getElementById("data");
-htmlElement.innerHTML = "DATA: " + date;
+var htmlElement3 = document.getElementById("data");
+htmlElement3.innerHTML = "DATA: " + date;
 
 
 
