@@ -14,10 +14,22 @@ body {
 /* header */
 
 .farecalc {
-  font-size: 50px;
+  font-size: 40px;
   color: red;
 }
 
 #price {
   font-size: 30px;
+}
+
+.container {
+  border: black solid 1px;
+}
+
+#button {
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px;
+  background-color: lightblue;
+  border-radius: 4px;
 }

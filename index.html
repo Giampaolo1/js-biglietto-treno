@@ -14,29 +14,48 @@
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-    <title>JP Train Ticket</title>
+    <title>JP TicketFareCalc</title>
   </head>
   <body>
   <!-- inizio header  -->
-  <div class="farecalc">
-    FARES CALCULATOR
-  </div>
-  <div id="price">
-    Price:
-  </div>
-  <div id="data">
-    Data:
-  </div>
-  <div id="codbig">
-    Codice Biglietto:
-  </div>
-  <br>
-  <div class="goal">
+  <div class="description">
+    TICKETFARECALC
+    <br>
+    Il programma dovrà chiedere
+    all’utente il numero di chilometri e
+    l’età e dovrà calcolare il prezzo totale
+    del viaggio.<br>
     Il prezzo del biglietto è definito in
     base ai km (0.21 €cent al km) ma c’è
     uno sconto del 20% per i minorenni e
     del 40% per gli over 65
   </div>
+  <br>
+  <button id="button" onclick="fxPrompt()" type="button" name="button">INIZIA!</button>
+  <br>
+  <br>
+  <div class="container">
+    <div class="farecalc">
+      FARES CALCULATOR
+    </div>
+    <div id="price">
+      Price:
+    </div>
+    <div id="data">
+      Data:
+    </div>
+    <div id="codbig">
+      Codice Biglietto:
+    </div>
+  </div>
+
+  <br>
+  <!-- <div class="goal">
+    Il prezzo del biglietto è definito in
+    base ai km (0.21 €cent al km) ma c’è
+    uno sconto del 20% per i minorenni e
+    del 40% per gli over 65
+  </div> -->
 
   <!-- script -->
   <script type="text/javascript" src="script/main.js">

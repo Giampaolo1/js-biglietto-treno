@@ -10,22 +10,50 @@
 // prompts
 
 // quanti km vuoi percorrere? (0.21 eur x km)
-var askkm = prompt("Quanti KM vuoi percorrere?");
-// quanti anni hai ? (sconti under 20 and over 65)
-var askage = parseInt(prompt("Quanti anni hai?"));
+function fxPrompt() {
+  var askkm = prompt("Quanti KM vuoi percorrere?");
+  // quanti anni hai ? (sconti under 20 and over 65)
+  var askage = parseInt(prompt("Quanti anni hai?"));
+
+  // creo numero random per il biglietto
+  var ticketnumber = Math.floor(Math.random()*1000);
+
+  // creo data odierna per biglietto
+  var date = new Date()
+
+  // assegno a data una stringa
+  date = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+
+  // calcola il prezzo in base ai km (imputuser x 0.21)
+  var prezzo = askkm * 0.21;
+
+  // variabile sconto;
+  var sconto;
+
+  if (askage < 18) {
+    sconto = (prezzo/100) * 20;
+    prezzo -= sconto;
+  } else if (askage > 65) {
+    sconto = (prezzo/100) * 40;
+    prezzo -= sconto;
+  }
+
+  // seleziono elemento html in cui fare output
+  var htmlElement = document.getElementById("price");
+  htmlElement.innerHTML = "PREZZO: " + prezzo.toFixed(2) + " € <br> Buon Viaggio!";
+
+  // stampo prezzo
+  // stampo codice biglietto
+  var htmlElement = document.getElementById("codbig");
+  htmlElement.innerHTML = "TicketID: " + ticketnumber;
+
+  // stampo data
+  var htmlElement = document.getElementById("data");
+  htmlElement.innerHTML = "DATA: " + date;
 
 
-// creo numero random per il biglietto
-var ticketnumber = Math.floor(Math.random()*1000);
+}
 
-// creo data odierna per biglietto
-var date = new Date()
-
-// assegno a data una stringa
-date = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-
-// calcola il prezzo in base ai km (imputuser x 0.21)
-var prezzo = askkm * 0.21;
 
 // : capire come calcolare lo sconto
 // if minore di 18 apply 20% discount
@@ -40,29 +68,6 @@ var prezzo = askkm * 0.21;
 
 // vari output in base all input:
 
-// variabile sconto;
-var sconto;
-
-if (askage < 18) {
-  sconto = (prezzo/100) * 20;
-  prezzo -= sconto;
-} else if (askage > 65) {
-  sconto = (prezzo/100) * 40;
-  prezzo -= sconto;
-}
-
-// seleziono elemento html in cui fare output
-var htmlElement = document.getElementById("price");
-htmlElement.innerHTML = "PREZZO: " + prezzo.toFixed(2) + " € <br> Buon Viaggio!";
-
-// stampo prezzo
-// stampo codice biglietto
-var htmlElement = document.getElementById("codbig");
-htmlElement.innerHTML = "TicketID: " + ticketnumber;
-
-// stampo data
-var htmlElement = document.getElementById("data");
-htmlElement.innerHTML = "DATA: " + date;
 
 
 
